@@ -1,0 +1,218 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: rgba(15, 25, 35, 0.95);
+  border: 2px solid var(--valorant-red);
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  color: var(--valorant-red);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.login-header p {
+  color: var(--valorant-light-gray);
+  font-size: 16px;
+}
+
+.login-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--valorant-dark-gray);
+}
+
+.login-tabs button {
+  background: none;
+  border: none;
+  color: var(--valorant-light-gray);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  flex: 1;
+  border-bottom: 3px solid transparent;
+}
+
+.login-tabs button.active {
+  color: var(--valorant-red);
+  border-bottom: 3px solid var(--valorant-red);
+}
+
+.login-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--valorant-light-gray);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(41, 41, 41, 0.7);
+  border: 1px solid var(--valorant-dark-gray);
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--valorant-red);
+  outline: none;
+}
+
+.help-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.help-text a {
+  color: var(--valorant-red);
+  text-decoration: none;
+}
+
+.help-text a:hover {
+  text-decoration: underline;
+}
+
+/* 复选框样式 */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--valorant-light-gray);
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(41, 41, 41, 0.7);
+  border: 1px solid var(--valorant-dark-gray);
+  border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: var(--valorant-red);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--valorant-red);
+  border-color: var(--valorant-red);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--valorant-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #e63e4c;
+}
+
+.login-form button:disabled {
+  background-color: #9a3039;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.disclaimer {
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.error-message {
+  color: var(--valorant-red);
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255, 70, 85, 0.1);
+  border-left: 3px solid var(--valorant-red);
+  border-radius: 2px;
+}
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 20px;
+  }
+  
+  .login-header h1 {
+    font-size: 24px;
+  }
+}

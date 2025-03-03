@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--valorant-blue);
+  border-top: 2px solid var(--valorant-red);
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  color: var(--valorant-light-gray);
+  font-size: 14px;
+}
+
+.footer-links p {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: var(--valorant-red);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

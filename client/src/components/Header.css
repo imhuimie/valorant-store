@@ -1,0 +1,71 @@
+.header {
+  background-color: var(--valorant-blue);
+  border-bottom: 2px solid var(--valorant-red);
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo a {
+  color: var(--valorant-red);
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--valorant-light-gray);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--valorant-red);
+}
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: var(--valorant-light-gray);
+  border: 1px solid var(--valorant-red);
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: var(--valorant-red);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav ul {
+    gap: 10px;
+  }
+}
